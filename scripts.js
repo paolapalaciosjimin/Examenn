@@ -1,6 +1,7 @@
 let nombre = document.getElementById("nombre")
 let forma = documet.getElementById("forma")
 let color = document.getElementById("color")
+let save_btn = document.getElementById("save-btn")
 let list_container = document.getElementById("list-container");
 let tasks = [];
 
@@ -33,6 +34,10 @@ const set_data_localstorage = () => {
       alert("Complete todos los campos");
     }
   };
+  save_btn.addEventListener("click", ()=>{
+    print_tasks();
+    console.log(shape.value)
+})
   const print_tasks = () => {
     get_data_localstorage();
     list_container.innerHTML = ""; 
